@@ -1,17 +1,33 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Travis Dickey — Principal">
+  <h1>Travis Dickey</h1>
+  <p class="lead">
+    Middle school principal focused on building strong adult culture,
+    coherent teaching and learning, and schools where students and families belong.
+  </p>
+
+  <h2>Current focus</h2>
+  <ul>
+    <li>Culture and belonging</li>
+    <li>Teaching and learning systems</li>
+    <li>Developing people</li>
+  </ul>
+
+  <p>
+    <a href={`${import.meta.env.BASE_URL}about/`}>About</a>
+    ·
+    <a href={`${import.meta.env.BASE_URL}experience/`}>Experience</a>
+    ·
+    <a href={`${import.meta.env.BASE_URL}leadership/`}>Leadership</a>
+  </p>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1.15rem;
+    color: #333;
+  }
+</style>
